@@ -52,22 +52,19 @@ export default {
         legend: {
           left: 'center',
           bottom: '10',
-          data: ['Industries', 'Technology', 'Forex', 'Gold', 'Forecasts']
+          data: ['可用内存', '已用内存']
         },
         calculable: true,
         series: [
           {
-            name: 'WEEKLY WRITE ARTICLES',
+            name: '总内存：1000MB',
             type: 'pie',
             roseType: 'radius',
             radius: [15, 95],
             center: ['50%', '38%'],
             data: [
-              { value: 320, name: 'Industries' },
-              { value: 240, name: 'Technology' },
-              { value: 149, name: 'Forex' },
-              { value: 100, name: 'Gold' },
-              { value: 59, name: 'Forecasts' }
+              { value: 320, name: '可用内存' },
+              { value: 240, name: '已用内存' }
             ],
             animationEasing: 'cubicInOut',
             animationDuration: 2600

@@ -1,6 +1,6 @@
 <template>
   <div class="login-container">
-    <div class="bg" :style="backImage" ></div>
+    <div class="bg" :style="backImage" />
     <div class="login-form">
       <div class="title-container">
         <h3 class="title">

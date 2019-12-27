@@ -1,5 +1,5 @@
 <template>
-  <el-row :gutter="40" class="panel-group" v-if="quantityObject !== null">
+  <el-row v-if="quantityObject !== null" :gutter="40" class="panel-group">
     <el-col :xs="12" :sm="12" :lg="6" class="card-panel-col">
       <div class="card-panel" @click="handleSetLineChartData('newVisitis')">
         <div class="card-panel-icon-wrapper icon-people">
@@ -9,7 +9,7 @@
           <div class="card-panel-text">
             阅读量
           </div>
-          <count-to :start-val="0" :end-val="quantityObject.viewsTotal" :duration="2600" class="card-panel-num"/>
+          <count-to :start-val="0" :end-val="quantityObject.viewsTotal" :duration="2600" class="card-panel-num" />
         </div>
       </div>
     </el-col>

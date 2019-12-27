@@ -39,16 +39,14 @@
           />
         </el-form-item>
 
-
-
         <el-form-item style="margin-bottom: 40px;" label-width="70px" label="分类:">
           <el-select v-model="postForm.categoryId" placeholder="请选择">
-            <el-option v-for="item in categorys" :key="item.id" :label="item.name" :value="item.id"/>
+            <el-option v-for="item in categorys" :key="item.id" :label="item.name" :value="item.id" />
           </el-select>
         </el-form-item>
 
         <el-form-item style="margin-bottom: 40px;" label-width="70px" label="权重:">
-            <el-input v-model="postForm.weight" style="width: 140px"></el-input>
+          <el-input v-model="postForm.weight" style="width: 140px" />
         </el-form-item>
 
         <el-form-item style="margin-bottom: 40px;" label-width="70px" label="标签:">
@@ -82,7 +80,6 @@
 <script>
 import MDinput from '@/components/MDinput'
 import Sticky from '@/components/Sticky' // 粘性header组件
-import { validURL } from '@/utils/validate'
 import { fetchTagsList } from '@/api/tags'
 import { fetchCategoryLists } from '@/api/category'
 import { fetchArticle, createArticle, updateArticle } from '@/api/article'
@@ -149,21 +146,6 @@ export default {
           type: 'error'
         })
         callback(new Error(rule.field + '为必传项'))
-      } else {
-        callback()
-      }
-    }
-    const validateSourceUri = (rule, value, callback) => {
-      if (value) {
-        if (validURL(value)) {
-          callback()
-        } else {
-          this.$message({
-            message: '外链url填写不正确',
-            type: 'error'
-          })
-          callback(new Error('外链url填写不正确'))
-        }
       } else {
         callback()
       }
@@ -310,7 +292,7 @@ export default {
               sourceUri: this.postForm.sourceUri, // 文章外链
               thumbnail: this.postForm.thumbnail, // 文章图片
               isComment: this.postForm.isComment,
-              categoryId:this.postForm.categoryId, // 文章分类
+              categoryId: this.postForm.categoryId, // 文章分类
               isPublishByteBlogs: this.postForm.isPublishByteBlogs,
               tagsList: this.dynamicTags,
               weight: this.postForm.weight

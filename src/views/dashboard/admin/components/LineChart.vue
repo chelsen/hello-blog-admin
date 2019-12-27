@@ -62,9 +62,13 @@ export default {
       this.setOptions(this.chartData)
     },
     setOptions({ expectedData, actualData } = {}) {
+      const time = []
+      for (let i = 0; i < 24; i++) {
+        time.push(i)
+      }
       this.chart.setOption({
         xAxis: {
-          data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+          data: time,
           boundaryGap: false,
           axisTick: {
             show: false
@@ -93,7 +97,7 @@ export default {
           data: ['expected', 'actual']
         },
         series: [{
-          name: 'expected', itemStyle: {
+          name: '今日', itemStyle: {
             normal: {
               color: '#FF005A',
               lineStyle: {
@@ -109,7 +113,7 @@ export default {
           animationEasing: 'cubicInOut'
         },
         {
-          name: 'actual',
+          name: '昨日',
           smooth: true,
           type: 'line',
           itemStyle: {

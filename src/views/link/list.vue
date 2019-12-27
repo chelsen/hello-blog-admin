@@ -59,13 +59,13 @@
           <el-input v-model="temp.name" placeholder="友情链接网址的名称" />
         </el-form-item>
         <el-form-item label="LOGO" prop="logo">
-          <el-input v-model="temp.logo" placeholder="友情链接网址的LOGO"/>
+          <el-input v-model="temp.logo" placeholder="友情链接网址的LOGO" />
         </el-form-item>
         <el-form-item label="链接" prop="href">
-          <el-input v-model="temp.href" placeholder="友情链接的链接地址 eg: https://www.byteblogs.com"/>
+          <el-input v-model="temp.href" placeholder="友情链接的链接地址 eg: https://www.byteblogs.com" />
         </el-form-item>
         <el-form-item label="简介" prop="description">
-          <el-input v-model="temp.description" placeholder="ByteBlogs社区是一群技术爱好者打造的以技术为核心的学习,交流社区。"/>
+          <el-input v-model="temp.description" placeholder="ByteBlogs社区是一群技术爱好者打造的以技术为核心的学习,交流社区。" />
         </el-form-item>
       </el-form>
       <div slot="footer" class="dialog-footer">

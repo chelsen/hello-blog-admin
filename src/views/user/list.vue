@@ -20,7 +20,7 @@
       </el-table-column>
       <el-table-column min-width="120px" label="角色">
         <template slot-scope="{row}">
-          <span>{{ row.roleId === 1 ?  '普通用户' : '管理员' }}</span>
+          <span>{{ row.roleId === 1 ? '普通用户' : '管理员' }}</span>
         </template>
       </el-table-column>
     </el-table>
